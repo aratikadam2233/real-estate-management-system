@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="my_booking" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6ce79a2b-059f-4a25-a03c-224a599e3de6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     my_booking.`b_id` AS my_booking_b_id,
+     my_booking.`fullname` AS my_booking_fullname,
+     my_booking.`emailaddress` AS my_booking_emailaddress,
+     my_booking.`phone` AS my_booking_phone,
+     my_booking.`property` AS my_booking_property,
+     my_booking.`date` AS my_booking_date,
+     my_booking.`message` AS my_booking_message
+FROM
+     `my_booking` my_booking]]>
+	</queryString>
+	<field name="my_booking_b_id" class="java.lang.Integer"/>
+	<field name="my_booking_fullname" class="java.lang.String"/>
+	<field name="my_booking_emailaddress" class="java.lang.String"/>
+	<field name="my_booking_phone" class="java.lang.String"/>
+	<field name="my_booking_property" class="java.lang.String"/>
+	<field name="my_booking_date" class="java.lang.String"/>
+	<field name="my_booking_message" class="java.lang.String"/>
+	<group name="my_booking_b_id">
+		<groupExpression><![CDATA[$F{my_booking_b_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="13" width="778" height="56" uuid="bb349818-f76c-4309-8568-fafe79106c1a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="395" y="29" width="105" height="20" uuid="07166879-7de5-4f14-b4e0-3389f706f4b3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[My_Booking]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="652" y="37" width="100" height="20" uuid="69289183-f009-4adb-9e86-3f097aa8ff3e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="ae11249c-d8b9-4ce2-a134-c23143cf9be2"/>
+				<text><![CDATA[my_booking_b_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="47c625cd-15c2-40f4-bc3e-ea8a43c59b9e"/>
+				<text><![CDATA[my_booking_fullname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="53438c74-07f8-4ee3-887a-1cd2fde5c058"/>
+				<text><![CDATA[my_booking_emailaddress]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="07c9cdcc-fe4e-4b87-948d-8759df74fb68"/>
+				<text><![CDATA[my_booking_phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="27de8ae2-7ff2-4152-ab25-074a383e5806"/>
+				<text><![CDATA[my_booking_property]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="a5cf1079-b41f-4d09-81a2-1559fbfd640a"/>
+				<text><![CDATA[my_booking_date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="df7662c7-270f-40e1-b423-7d0a22468db4"/>
+				<text><![CDATA[my_booking_message]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="798" height="1" uuid="f9eaa3d5-b593-403e-b4a8-89a6b2a21e48"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="d6d6de03-4193-4001-9e1b-28f7d1efaa08"/>
+				<textFieldExpression><![CDATA[$F{my_booking_b_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="1343fec1-2595-4d19-99b1-7740ad0a1807"/>
+				<textFieldExpression><![CDATA[$F{my_booking_fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="7b74efef-b58b-477c-81a4-35a51c14304f"/>
+				<textFieldExpression><![CDATA[$F{my_booking_emailaddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="9c1580f6-8352-4048-a511-484891555c26"/>
+				<textFieldExpression><![CDATA[$F{my_booking_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="e5e5145b-7d8c-4f4f-aa9e-137c7c6d63be"/>
+				<textFieldExpression><![CDATA[$F{my_booking_property}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="9a4b2d02-e038-40cc-85d8-bf1e5f230c09"/>
+				<textFieldExpression><![CDATA[$F{my_booking_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="58ff9244-9d8f-4736-ad14-25bde442ede5"/>
+				<textFieldExpression><![CDATA[$F{my_booking_message}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

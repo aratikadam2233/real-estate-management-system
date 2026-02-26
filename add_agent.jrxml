@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="add_agent" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2d6f9e6a-edac-4523-9455-a9d6149bdd9e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     add_agent.`A_id` AS add_agent_A_id,
+     add_agent.`agentname` AS add_agent_agentname,
+     add_agent.`email` AS add_agent_email,
+     add_agent.`contact` AS add_agent_contact
+FROM
+     `add_agent` add_agent]]>
+	</queryString>
+	<field name="add_agent_A_id" class="java.lang.Integer"/>
+	<field name="add_agent_agentname" class="java.lang.String"/>
+	<field name="add_agent_email" class="java.lang.String"/>
+	<field name="add_agent_contact" class="java.lang.String"/>
+	<group name="add_agent_A_id">
+		<groupExpression><![CDATA[$F{add_agent_A_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="12" width="778" height="55" uuid="d9825504-7a05-4ea0-8e8a-368fab4fe9f9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="31" width="100" height="20" uuid="29e1d391-a540-4f93-ae95-adbda1c04496"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Add_Agent]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="600" y="-62" width="100" height="20" uuid="e80a4424-dbcc-4333-b75c-e797d05e045d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="97" height="20" uuid="4a5b239d-894e-4e32-a09c-ad7252ceeda1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[add_agent_A_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="134" height="20" uuid="a2557f3d-aff2-49a2-8110-d1e2f2d42f65"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[add_agent_agentname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="112" height="20" uuid="13944d6b-f3ed-4d85-b095-02548678b0a7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[add_agent_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="135" height="20" uuid="71e79590-b474-4d22-9ae8-164e4ff7526b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[add_agent_contact]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="200" height="20" uuid="387e810f-d4ed-4ca2-9c60-b4579ccf108c"/>
+				<textFieldExpression><![CDATA[$F{add_agent_A_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="200" height="20" uuid="4556bcb8-62f0-44a8-ac96-46b2942231ec"/>
+				<textFieldExpression><![CDATA[$F{add_agent_agentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="200" height="20" uuid="bd754610-d848-461a-93b7-a49aedd96249"/>
+				<textFieldExpression><![CDATA[$F{add_agent_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="200" height="20" uuid="73ac7d2d-f285-4642-92be-fbe524f480b9"/>
+				<textFieldExpression><![CDATA[$F{add_agent_contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>

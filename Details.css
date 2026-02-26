@@ -1,0 +1,116 @@
+@charset "ISO-8859-1";
+.viwe-details-section 
+{
+	max-width: 800px;
+	margin:40px auto;
+	padding:20px;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+
+
+}
+.details-container 
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+.details-card h3 
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+
+	
+}
+.details-card p 
+{
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.details-card ul 
+{
+	font-size: 14px;
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+.details-card li 
+{
+	margin-bottom: 10px;
+}
+.details-card li 
+{
+	font-weight: bold;
+}
+
+button 
+{
+	background: green;
+	color: white;
+	padding:10px;
+	border:none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor:pointer;
+	margin-top:10px;
+}
+
+
+ nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 100px;
+	color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+.logo {
+	font-size: 25px;
+	color: #fff;
+	padding: 0 15px;
+}
+.menu ul li {
+	display: inline-block;
+	margin: 0 15px;
+}
+.menu ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: montserrat;
+	color: #fff;
+	padding: 5px 15px;
+}
+.menu ul li a:hover{
+    background:green;
+}
+.socials a {
+	text-decoration: none;
+	background: green;
+	color: #fff;
+	padding: 10px 35px;
+}
+
+
+
+
+
+

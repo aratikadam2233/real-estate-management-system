@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="add_agent1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e20abbd-86f9-47fb-967c-db29252600c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     add_agent.`A_id` AS add_agent_A_id,
+     add_agent.`agentname` AS add_agent_agentname,
+     add_agent.`email` AS add_agent_email,
+     add_agent.`contact` AS add_agent_contact
+FROM
+     `add_agent` add_agent
+where A_id = $P{id};]]>
+	</queryString>
+	<field name="add_agent_A_id" class="java.lang.Integer"/>
+	<field name="add_agent_agentname" class="java.lang.String"/>
+	<field name="add_agent_email" class="java.lang.String"/>
+	<field name="add_agent_contact" class="java.lang.String"/>
+	<group name="add_agent_A_id">
+		<groupExpression><![CDATA[$F{add_agent_A_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="16" y="12" width="773" height="56" uuid="6c0f3447-5c40-4536-91f7-5cc1c98622f3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="323" y="32" width="100" height="20" uuid="f0b448f3-4b51-4bbd-a9c6-1cb8763dbb60"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[    Add_Agent]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="658" y="32" width="100" height="20" uuid="fa5ab025-8849-4b3b-9b0c-648610cd1bea"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="200" height="20" uuid="6e9bb2c4-5b09-4db2-9130-d641c89ead8d"/>
+				<text><![CDATA[add_agent_A_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="200" height="20" uuid="3c66a674-ee7e-4608-a005-3526108be3ef"/>
+				<text><![CDATA[add_agent_agentname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="200" height="20" uuid="1619b33f-cda3-4727-87ae-a7e691230863"/>
+				<text><![CDATA[add_agent_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="200" height="20" uuid="1edf31ed-1260-4f60-8f0d-b79cd7b38123"/>
+				<text><![CDATA[add_agent_contact]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="200" height="20" uuid="31403b4e-1457-43b5-9d86-2def82bf8bda"/>
+				<textFieldExpression><![CDATA[$F{add_agent_A_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="200" height="20" uuid="9a067009-7cd2-4e43-a14b-a096c640a939"/>
+				<textFieldExpression><![CDATA[$F{add_agent_agentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="200" height="20" uuid="a6ca17d1-655d-49c3-9a60-21da71803228"/>
+				<textFieldExpression><![CDATA[$F{add_agent_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="200" height="20" uuid="3b8dd956-e943-4649-849f-24f6d8e2189f"/>
+				<textFieldExpression><![CDATA[$F{add_agent_contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

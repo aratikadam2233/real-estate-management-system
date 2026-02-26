@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="add_type" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="272a2b00-5e97-4814-a04b-fc710b7ae93e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="131"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     add_type.`Add_id` AS add_type_Add_id,
+     add_type.`Type_Name` AS add_type_Type_Name,
+     add_type.`description` AS add_type_description,
+     add_type.`image` AS add_type_image
+FROM
+     `add_type` add_type]]>
+	</queryString>
+	<field name="add_type_Add_id" class="java.lang.Integer"/>
+	<field name="add_type_Type_Name" class="java.lang.String"/>
+	<field name="add_type_description" class="java.lang.String"/>
+	<field name="add_type_image" class="java.lang.String"/>
+	<group name="add_type_Add_id">
+		<groupExpression><![CDATA[$F{add_type_Add_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="17" y="10" width="771" height="58" uuid="aafb7094-8ecd-4113-853c-bd1ab9067255"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="377" y="26" width="100" height="20" uuid="ec507e84-433b-40bf-991b-747a5af68650"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Add_Type]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="651" y="25" width="100" height="20" uuid="02baad80-ecb2-4161-9e26-3f23309f4338"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="7138f7ee-9bf5-489c-b10b-f9ba4477013a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Add_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="139" height="20" uuid="b33e4f3b-86ab-4114-811d-2b608917039c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="130" height="20" uuid="3f623560-67c6-4203-9642-0018c08e82cb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="134" height="20" uuid="bdca7d4b-11fc-409f-8178-350f9c14f0ac"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[image]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="d538e857-1745-434b-b231-9d409e674ef2"/>
+				<textFieldExpression><![CDATA[$F{add_type_Add_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="139" height="20" uuid="e589bfd9-000b-411e-9938-f9dcc0c3ecde"/>
+				<textFieldExpression><![CDATA[$F{add_type_Type_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="130" height="20" uuid="0630e441-c9ba-4fe8-a1d6-9c8b481b34b7"/>
+				<textFieldExpression><![CDATA[$F{add_type_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="134" height="20" uuid="875c1ec7-99bb-44cb-a9b6-2cc5526a7501"/>
+				<textFieldExpression><![CDATA[$F{add_type_image}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

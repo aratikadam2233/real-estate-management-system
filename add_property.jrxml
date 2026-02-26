@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="add_property" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f6d53207-a8b8-4d67-a2cd-798a106d482d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     add_property.`p_id` AS add_property_p_id,
+     add_property.`property_name` AS add_property_property_name,
+     add_property.`location` AS add_property_location,
+     add_property.`price` AS add_property_price,
+     add_property.`description` AS add_property_description,
+     add_property.`image` AS add_property_image,
+     add_property.`agentname` AS add_property_agentname,
+     add_property.`bedroom` AS add_property_bedroom,
+     add_property.`bathroom` AS add_property_bathroom,
+     add_property.`square_footage` AS add_property_square_footage,
+     add_property.`pool` AS add_property_pool,
+     add_property.`gym` AS add_property_gym,
+     add_property.`security_system` AS add_property_security_system,
+     add_property.`city` AS add_property_city,
+     add_property.`zip` AS add_property_zip
+FROM
+     `add_property` add_property]]>
+	</queryString>
+	<field name="add_property_p_id" class="java.lang.Integer"/>
+	<field name="add_property_property_name" class="java.lang.String"/>
+	<field name="add_property_location" class="java.lang.String"/>
+	<field name="add_property_price" class="java.lang.String"/>
+	<field name="add_property_description" class="java.lang.String"/>
+	<field name="add_property_image" class="java.lang.String"/>
+	<field name="add_property_agentname" class="java.lang.String"/>
+	<field name="add_property_bedroom" class="java.lang.String"/>
+	<field name="add_property_bathroom" class="java.lang.String"/>
+	<field name="add_property_square_footage" class="java.lang.String"/>
+	<field name="add_property_pool" class="java.lang.String"/>
+	<field name="add_property_gym" class="java.lang.String"/>
+	<field name="add_property_security_system" class="java.lang.String"/>
+	<field name="add_property_city" class="java.lang.String"/>
+	<field name="add_property_zip" class="java.lang.String"/>
+	<group name="add_property_p_id">
+		<groupExpression><![CDATA[$F{add_property_p_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="16" width="802" height="51" uuid="b551b8c3-017d-4834-a299-4184802d1652"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="371" y="33" width="100" height="20" uuid="135b7951-3340-4968-a500-5115b0711c11"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Add_Property]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="689" y="33" width="100" height="20" uuid="dcb6a9a9-d6b8-4ab0-a148-3c23e405a3c4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="53" height="20" uuid="0d8add9a-01fa-4cb2-9413-897a851f159c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[p_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="0" width="53" height="20" uuid="beff897f-d34d-4116-afee-d66e1165d460"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[propertyname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="0" width="53" height="20" uuid="c9566941-a2f7-4772-ae6b-42e8a83db44e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="0" width="53" height="20" uuid="3d4374eb-8480-4878-ba7a-1ce561b96a35"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="0" width="53" height="20" uuid="4d5ebdba-ab52-4787-b345-dc8b100d8d69"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="53" height="20" uuid="d15ee80e-95ce-4a8c-b0ad-1f2597c9ab32"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[image]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="53" height="20" uuid="60e16507-e752-47ac-9262-a7206b1bd6e5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[agentname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="53" height="20" uuid="01793746-eea7-4f54-ad54-5dc2616aba05"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bedroom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="0" width="53" height="20" uuid="9ee8326e-5ba4-4537-a34e-1e41c605c920"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[bathroom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="53" height="20" uuid="f17534d2-0002-48b8-8723-5c193f7c2ad6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[square_footage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="0" width="53" height="20" uuid="65b9a5a9-7eb3-43ce-a292-b8121ff55d73"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pool]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="583" y="0" width="53" height="20" uuid="1aaa5fa8-ad0e-48bd-8e39-a15fa0c0c963"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[gym]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="636" y="0" width="53" height="20" uuid="9c0f7e58-ab48-418f-b0e5-7d04fb910575"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[add_property_security_system]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="0" width="53" height="20" uuid="12a22fea-83f1-466e-b771-eeecce528cb5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[city]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="0" width="53" height="20" uuid="cc2477a2-bd47-4260-930f-6d1feeff0cd3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[zip]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="53" height="20" uuid="bc1ea536-7afd-4b6d-bf04-47d1fd416831"/>
+				<textFieldExpression><![CDATA[$F{add_property_p_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="0" width="53" height="20" uuid="b1afcc64-c4ff-4375-96de-8f4444ed5a04"/>
+				<textFieldExpression><![CDATA[$F{add_property_property_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="0" width="53" height="20" uuid="40473f03-0e25-4b5b-a6e7-6ef84d88ef06"/>
+				<textFieldExpression><![CDATA[$F{add_property_location}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="0" width="53" height="20" uuid="d0add037-2390-477b-a9f7-96b4d6c40683"/>
+				<textFieldExpression><![CDATA[$F{add_property_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="53" height="20" uuid="aa2e0986-f2e6-4388-91c0-78fc188fb904"/>
+				<textFieldExpression><![CDATA[$F{add_property_description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="53" height="20" uuid="fee944e3-f446-48e3-a882-6b0e75137159"/>
+				<textFieldExpression><![CDATA[$F{add_property_image}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="53" height="20" uuid="1c7627ac-1710-440e-abd9-fb144fe3019f"/>
+				<textFieldExpression><![CDATA[$F{add_property_agentname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="53" height="20" uuid="10482c0b-fae0-4a88-83f4-d492072b9b03"/>
+				<textFieldExpression><![CDATA[$F{add_property_bedroom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="0" width="53" height="20" uuid="155b3995-5b35-4858-b5eb-bde471a23496"/>
+				<textFieldExpression><![CDATA[$F{add_property_bathroom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="53" height="20" uuid="93dc2c09-1ea7-4101-a838-f704b50cdfbd"/>
+				<textFieldExpression><![CDATA[$F{add_property_square_footage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="530" y="0" width="53" height="20" uuid="a5ccc38f-2326-4a9a-a6f5-237394c14be8"/>
+				<textFieldExpression><![CDATA[$F{add_property_pool}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="583" y="0" width="53" height="20" uuid="3359cbcd-5991-46c9-9b13-03c45ba9d6b5"/>
+				<textFieldExpression><![CDATA[$F{add_property_gym}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="636" y="0" width="53" height="20" uuid="53587a55-2a06-42aa-99e1-7eb21d0bb7f7"/>
+				<textFieldExpression><![CDATA[$F{add_property_security_system}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="689" y="0" width="53" height="20" uuid="9017c0d0-0a77-4b35-941c-982355125120"/>
+				<textFieldExpression><![CDATA[$F{add_property_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="742" y="0" width="53" height="20" uuid="8fb20793-1402-4dbd-997a-9ceb24bef569"/>
+				<textFieldExpression><![CDATA[$F{add_property_zip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

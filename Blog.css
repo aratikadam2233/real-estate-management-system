@@ -1,0 +1,172 @@
+@charset "ISO-8859-1";
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+
+}
+.container 
+{
+	width:100%;
+}
+.blog-section 
+{
+	width:80%;
+	margin:auto;
+}
+.blog-section .title 
+{
+	width:60%;
+	text-align: center;
+	margin:auto;
+}
+.blog-section .title h1 
+{
+	color: black;
+	font-size: 45px;
+	margin-top: 30px;
+	font-weight: 700;
+}
+.blog-section .title p 
+{
+	color:#5b5b5b;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:auto;
+}
+.content .card 
+{
+	flex:1;
+	margin:40px 20px;
+}
+.content .card img 
+{
+	width: 100%;
+	height:auto;
+}
+.content .card h4 
+{
+	font-size: 17px;
+	margin-top: 20px;
+}
+.content .card p 
+{
+	font-size: 15px;
+	margin-top: 15px;
+	color:#5b5b5b;
+	line-height: 1.5;
+}
+@media screen and (max-width:768px){
+	.content{
+		flex-direction: column;
+	}
+}
+button 
+{
+	background: #e54c4c;
+	color: white;
+	padding:10px;
+	border:none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor:pointer;
+	margin-top:10px;
+}
+
+button:hover 
+{
+	background:	 #e54c4c;
+
+}
+nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 100px;
+	color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+.logo {
+	font-size: 25px;
+	color: #fff;
+	padding: 0 15px;
+}
+.menu ul li {
+	display: inline-block;
+	margin: 0 15px;
+}
+.menu ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: montserrat;
+	color: #fff;
+	padding: 5px 15px;
+}
+.menu ul li a:hover{
+    background:green;
+}
+.socials a {
+	text-decoration: none;
+	background: green;
+	color: #fff;
+	padding: 10px 35px;
+}
+nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 100px;
+	color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+.logo {
+	font-size: 25px;
+	color: #fff;
+	padding: 0 15px;
+}
+.menu ul li {
+	display: inline-block;
+	margin: 0 15px;
+}
+.menu ul li a {
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: montserrat;
+	color: #fff;
+	padding: 5px 15px;
+}
+.menu ul li a:hover{
+    background:green;
+}
+.socials a {
+	text-decoration: none;
+	background: green;
+	color: #fff;
+	padding: 10px 35px;
+}
+
+
+
+
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contactus2" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4f7fa4e-9f76-42d6-ae92-7fc88139ea90">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="131"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     contactus.`user_id` AS contactus_user_id,
+     contactus.`name` AS contactus_name,
+     contactus.`subject` AS contactus_subject,
+     contactus.`message` AS contactus_message,
+     contactus.`email` AS contactus_email
+FROM
+     `contactus` contactus
+where user_id = $P{id}]]>
+	</queryString>
+	<field name="contactus_user_id" class="java.lang.Integer"/>
+	<field name="contactus_name" class="java.lang.String"/>
+	<field name="contactus_subject" class="java.lang.String"/>
+	<field name="contactus_message" class="java.lang.String"/>
+	<field name="contactus_email" class="java.lang.String"/>
+	<group name="contactus_user_id">
+		<groupExpression><![CDATA[$F{contactus_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="12" width="780" height="52" uuid="058bb1e8-69cc-4c8b-8ec3-7f2f8793773e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="380" y="32" width="100" height="20" uuid="61c56958-5e18-4a15-8ef9-52df64eeed06"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[      Contactus]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="654" y="38" width="100" height="20" uuid="6604166e-dcc5-4d63-9dc1-0742a2ac8225"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="24" width="800" height="1" uuid="91df75ef-2ef2-4ab3-91a4-a3bfa1ac89e1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="20" uuid="b3918543-0ab1-4b14-bb8a-199529028768"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[    user_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="160" height="20" uuid="cb459e55-6926-4de2-9f4a-efc23b417e43"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="160" height="20" uuid="36a3594a-26fd-4c00-9b88-6202cf92a413"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="160" height="20" uuid="380c48b3-2e7c-448b-8e3f-80047135c013"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[message]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="160" height="20" uuid="55e69c6e-6249-46f1-b571-ac048684fb91"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="800" height="1" uuid="6a09ba31-ccc3-433f-96a0-58cb570438ff"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="160" height="20" uuid="341f14a9-3811-431d-b03c-3e5b45b67af6"/>
+				<textFieldExpression><![CDATA[$F{contactus_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="160" height="20" uuid="6fd6ef91-fe9b-4118-844c-cfdc18c2f007"/>
+				<textFieldExpression><![CDATA[$F{contactus_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="160" height="20" uuid="560eeba8-1de0-40e1-a1f5-aa1980d41a8c"/>
+				<textFieldExpression><![CDATA[$F{contactus_subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="160" height="20" uuid="60e307cf-6576-4473-96ae-80a4fb30ea7a"/>
+				<textFieldExpression><![CDATA[$F{contactus_message}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="160" height="20" uuid="a86f0793-21c7-488c-838f-078e3467bca1"/>
+				<textFieldExpression><![CDATA[$F{contactus_email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="10" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

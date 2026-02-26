@@ -1,0 +1,32 @@
+@charset "ISO-8859-1";
+
+.box {
+   height: 500px;	
+   width: 1900px;
+  margin:50px 0 0 50px;
+  overflow: scroll;
+}
+
+table 
+{
+	width: 90%;
+	text-align: center;
+}
+
+th 
+{
+	background-color: green;
+	height: 60px;
+	text-align: center;
+}
+
+tbody tr td
+{
+	height: 40px;
+}
+
+tbody tr:hover
+{
+	background-color: rgb(192, 192, 192);
+	height: 50px;
+}
